@@ -2,9 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-# export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export ZSH=/Users/adambobrow/.oh-my-zsh
-source /Users/adambobrow/secrets.sh
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export ZSH=/$HOME/.oh-my-zsh
+## source /$HOME/secrets.sh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -56,7 +56,7 @@ ZSH_THEME="norm"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git colorize)
 
-source ~/.nvm/nvm.sh
+## source ~/.nvm/nvm.sh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -83,10 +83,10 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias emacs="/usr/local/Cellar/emacs-plus/25.3/bin/emacsclient -nw"
-alias Emacs='open -a /usr/local/Cellar/emacs-plus/25.3/bin/emacs'
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs-x86_64-10_10 -nw"
+alias Emacs='open -a /Applications/Emacs.app/Contents/MacOS/Emacs-x86_64-10_10 $1'
 # alias elight='/usr/local/Cellar/emacs-plus/25.3/bin/emacs -q --load ~/.init.d.light'
-alias elight='open -a /usr/local/Cellar/emacs-plus/25.3/bin/emacs --args -q --load ~/.init.d.light'
+#alias elight='open -a /usr/local/Cellar/emacs-plus/25.3/bin/emacs --args -q --load ~/.init.d.light'
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # \n. $HOME/.asdf/asdf.sh
@@ -98,7 +98,9 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # added by travis gem
-[ -f /Users/adambobrow/.travis/travis.sh ] && source /Users/adambobrow/.travis/travis.sh
+[ -f /$HOME/.travis/travis.sh ] && source /$HOME/.travis/travis.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
