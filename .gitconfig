@@ -1,4 +1,7 @@
 [core]
 	excludesfile = /Users/adambobrow/.gitignore_global
 [github]
-	user = bobrowadam
+	user = bigpandaio
+[user]
+	name = bobrowadam
+	email = bobrow.adam@gmail.com
