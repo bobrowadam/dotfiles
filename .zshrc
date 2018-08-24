@@ -84,6 +84,9 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs-x86_64-10_10 -nw"
+
+alias emacs="/usr/local/opt/emacs-plus/bin/emacsclient $1 -nw"
+alias em="/usr/local/opt/emacs-plus/bin/emacsclient $1 -nw"
 alias Emacs='open -a /Applications/Emacs.app/Contents/MacOS/Emacs-x86_64-10_10 $1'
 # alias elight='/usr/local/Cellar/emacs-plus/25.3/bin/emacs -q --load ~/.init.d.light'
 #alias elight='open -a /usr/local/Cellar/emacs-plus/25.3/bin/emacs --args -q --load ~/.init.d.light'
