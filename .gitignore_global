@@ -1,4 +1,7 @@
 .projectile
 **#
 **.org
-*~
+**~
+~
+telepresence.log
+ensime.sbt
