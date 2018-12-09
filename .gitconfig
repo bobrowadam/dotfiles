@@ -5,3 +5,5 @@
 [user]
 	name = bobrowadam
 	email = adam@bigpanda.io
+[merge]
+	conflictStyle = diff3

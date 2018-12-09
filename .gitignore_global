@@ -5,3 +5,6 @@
 ~
 telepresence.log
 ensime.sbt
+.indium.json
+jsconfig.json
+*org_archive
