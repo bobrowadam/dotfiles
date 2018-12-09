@@ -63,7 +63,8 @@ source ~/secrets.sh
 # User configuration
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+#export LANG="en_US.UTF-8"
+#export LC_ALL="en_US.UTF-8"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -85,24 +86,45 @@ source ~/secrets.sh
 #
 
 alias emacs="/usr/local/opt/emacs-plus/bin/emacsclient $1 -nw"
-alias em="/usr/local/opt/emacs-plus/bin/emacsclient $1 -nw"
-alias Emacs='open -a /Applications/Emacs.app/Contents/MacOS/Emacs-x86_64-10_10 $1'
+alias em="/usr/local/opt/emacs-plus/bin/emacs $1 -Q -nw --load /Users/bob/.emacs.d/.init.d.light.el"
+alias Emacs="open -a /usr/local/opt/emacs-plus/bin/emacs-26.1"
+alias Em="open -a /usr/local/opt/emacs-plus/bin/emacs-26.1 --args -Q"
+alias elight="open -a /usr/local/opt/emacs-plus/bin/emacs-26.1 --args -q --load '~/.emacs.d/.init.d.light.el'"
+alias eml="/usr/local/opt/emacs-plus/bin/emacs $1 -nw -q --load '~/.emacs.d/.init.d.light.el'"
+alias ctags="`brew --prefix`/bin/ctags"
+
+export EDITOR="/usr/local/opt/emacs-plus/bin/emacs -nw -Q --load '~/.emacs.d/.init.d.light.el'"
+
 # alias elight='/usr/local/Cellar/emacs-plus/25.3/bin/emacs -q --load ~/.init.d.light'
 #alias elight='open -a /usr/local/Cellar/emacs-plus/25.3/bin/emacs --args -q --load ~/.init.d.light'
 
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# \n. $HOME/.asdf/asdf.sh
+#alias ohmyzsh="mate ~/.oh-my-zsh"
+
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+
+
+# rust src path
+export RUST_SRC_PATH=/Users/bob/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib
+
+# kub aliases:
+alias k='kubectl --namespace bob'
+alias ccache='sudo killall -HUP mDNSResponder' # Clean DNS cahce.
+alias helmup='/Users/bob/source/helm-charts/bin/up  $1'
 
 # added by travis gem
 [ -f /$HOME/.travis/travis.sh ] && source /$HOME/.travis/travis.sh
+# export sbcl PATH
+export PATH="/usr/local/Cellar/sbcl/1.4.11/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/node@8/bin:$PATH"
+
+# added by travis gem
+[ -f /Users/bob/.travis/travis.sh ] && source /Users/bob/.travis/travis.sh
