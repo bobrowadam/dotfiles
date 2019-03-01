@@ -58,7 +58,6 @@ plugins=(git colorize)
 
 ## source ~/.nvm/nvm.sh
 source $ZSH/oh-my-zsh.sh
-source ~/secrets.sh
 
 # User configuration
 
@@ -83,17 +82,18 @@ source ~/secrets.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
 
-alias emacs="/usr/local/opt/emacs-plus/bin/emacsclient $1 -nw"
-alias em="/usr/local/opt/emacs-plus/bin/emacs $1 -Q -nw --load /Users/bob/.emacs.d/.init.d.light.el"
-alias Emacs="open -a /usr/local/opt/emacs-plus/bin/emacs-26.1"
-alias Em="open -a /usr/local/opt/emacs-plus/bin/emacs-26.1 --args -Q"
-alias elight="open -a /usr/local/opt/emacs-plus/bin/emacs-26.1 --args -q --load '~/.emacs.d/.init.d.light.el'"
-alias eml="/usr/local/opt/emacs-plus/bin/emacs $1 -nw -q --load '~/.emacs.d/.init.d.light.el'"
+# Emacs aliases
+alias emacs="emacsclient"
+alias em="/usr/local/bin/Emacs -nw"
+alias Emacs="open -a /usr/local/bin/Emacs"
+alias Em="open -a /usr/local/bin/Emacs --args -Q"
+alias elight="open -a Emacs --args -q --load '~/.emacs.d/.init.d.light.el'"
+alias eml="/usr/local/bin/Emacs -nw -q --load ~/.emacs.d/init-light.el"
+
 alias ctags="`brew --prefix`/bin/ctags"
 
-export EDITOR="/usr/local/opt/emacs-plus/bin/emacs -nw -Q --load '~/.emacs.d/.init.d.light.el'"
+export EDITOR="/usr/local/bin/Emacs -nw -q --load ~/.emacs.d/init-light.el"
 
 # alias elight='/usr/local/Cellar/emacs-plus/25.3/bin/emacs -q --load ~/.init.d.light'
 #alias elight='open -a /usr/local/Cellar/emacs-plus/25.3/bin/emacs --args -q --load ~/.init.d.light'
@@ -112,7 +112,7 @@ export LANG="en_US.UTF-8"
 export RUST_SRC_PATH=/Users/bob/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib
 
 # kub aliases:
-alias k='kubectl --namespace bob'
+alias kub='kubectl'
 alias ccache='sudo killall -HUP mDNSResponder' # Clean DNS cahce.
 alias helmup='/Users/bob/source/helm-charts/bin/up  $1'
 

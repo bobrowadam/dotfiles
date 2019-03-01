@@ -8,3 +8,6 @@ ensime.sbt
 .indium.json
 jsconfig.json
 *org_archive
+--set
+.metals/
+.bloop/
