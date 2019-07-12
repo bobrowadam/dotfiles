@@ -87,23 +87,14 @@ source $ZSH/oh-my-zsh.sh
 alias emacs="emacsclient"
 alias em="/usr/local/bin/Emacs -nw"
 alias Emacs="open -a /usr/local/bin/Emacs"
-alias Em="open -a /usr/local/bin/Emacs --args -Q"
-alias elight="open -a Emacs --args -q --load '~/.emacs.d/.init.d.light.el'"
-alias eml="/usr/local/bin/Emacs -nw -q --load ~/.emacs.d/init-light.el"
-
+alias Eml="open -n -a /usr/local/bin/Emacs"
+alias eml="/usr/local/bin/Emacs -q -nw --load ~/.sane_emacs.d/init.el"
 alias ctags="`brew --prefix`/bin/ctags"
 
-export EDITOR="/usr/local/bin/Emacs -nw -q --load ~/.emacs.d/init-light.el"
-
-# alias elight='/usr/local/Cellar/emacs-plus/25.3/bin/emacs -q --load ~/.init.d.light'
-#alias elight='open -a /usr/local/Cellar/emacs-plus/25.3/bin/emacs --args -q --load ~/.init.d.light'
-
-#alias ohmyzsh="mate ~/.oh-my-zsh"
-
+export EDITOR="/usr/local/bin/Emacs -nw -q --load ~/.sane_emacs.d/init.el"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
-
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
@@ -115,6 +106,7 @@ export RUST_SRC_PATH=/Users/bob/.rustup/toolchains/stable-x86_64-apple-darwin/li
 alias kub='kubectl'
 alias ccache='sudo killall -HUP mDNSResponder' # Clean DNS cahce.
 alias helmup='/Users/bob/source/helm-charts/bin/up  $1'
+alias lmi='AWS_PROFILE=dev-k8s AWS_REGION=us-east-2 let-me-in --port 443 letmein-dev-k8s'
 
 # added by travis gem
 [ -f /$HOME/.travis/travis.sh ] && source /$HOME/.travis/travis.sh
@@ -128,3 +120,8 @@ export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 # added by travis gem
 [ -f /Users/bob/.travis/travis.sh ] && source /Users/bob/.travis/travis.sh
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+
+# AWS CLI
+export PATH="$HOME/.local/lib/aws/bin/aws:$PATH"
