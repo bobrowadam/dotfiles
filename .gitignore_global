@@ -10,4 +10,8 @@ jsconfig.json
 *org_archive
 --set
 .metals/
+.metals/*
 .bloop/
+project/.bloop
+TAGS
+/tsfmt.json

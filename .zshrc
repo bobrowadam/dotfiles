@@ -126,3 +126,4 @@ export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
 # AWS CLI
 export PATH="$HOME/.local/lib/aws/bin/aws:$PATH"
+export AWS_PROFILE="dev-k8s"
