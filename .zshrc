@@ -127,3 +127,7 @@ export PATH="/usr/local/opt/libxml2/bin:$PATH"
 # AWS CLI
 export PATH="$HOME/.local/lib/aws/bin/aws:$PATH"
 export AWS_PROFILE="dev-k8s"
+vterm_prompt_end() {
+    printf "\e]51;A$(whoami)@$(hostname):$(pwd)\e\\";
+}
+PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
