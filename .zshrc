@@ -84,14 +84,14 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 # Emacs aliases
-alias emacs="emacsclient"
-alias em="/usr/local/bin/Emacs -nw"
-alias Emacs="open -a /usr/local/bin/Emacs"
-alias Eml="open -n -a /usr/local/bin/Emacs"
-alias eml="/usr/local/bin/Emacs -q -nw --load ~/.sane_emacs.d/init.el"
+alias emacs="/usr/local/opt/emacs-plus/bin/emacsclient"
+alias em="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -nw"
+alias Emacs="open -a /Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs"
+alias Eml="open -n -a /Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs"
+alias eml="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -q -nw --load ~/.emacs.d/init.el"
 alias ctags="`brew --prefix`/bin/ctags"
 
-export EDITOR="/usr/local/bin/Emacs -nw -q --load ~/.sane_emacs.d/init.el"
+export EDITOR="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -nw"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
@@ -130,4 +130,6 @@ export AWS_PROFILE="dev-k8s"
 vterm_prompt_end() {
     printf "\e]51;A$(whoami)@$(hostname):$(pwd)\e\\";
 }
+
 PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
+
