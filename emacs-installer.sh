@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-echo 'brew install emacs-plus --with-modern-icon;'
+brew install emacs-plus --with-modern-icon;
+brew install gpg2;

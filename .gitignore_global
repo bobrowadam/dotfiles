@@ -18,3 +18,4 @@ TAGS
 /project/metals.sbt
 coursier
 .bloop
+node_modules

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "node",
+    "target": "es6"
+  },
+  "baseUrl": ".",
+  "paths": {
+    "src": [
+      "./src/"
+    ],
+    "logic": ["./src/logic/"]
+    "setup": ["./src/setup/"]
+  }
+  "exclude": ["node_modules"]
+}
