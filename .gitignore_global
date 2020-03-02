@@ -14,7 +14,6 @@ jsconfig.json
 .bloop
 project/.bloop
 TAGS
-/tsfmt.json
 /project/metals.sbt
 coursier
 .bloop
