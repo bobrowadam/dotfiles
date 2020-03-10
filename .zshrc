@@ -131,4 +131,6 @@ vterm_prompt_end() {
     printf "\e]51;A$(whoami)@$(hostname):$(pwd)\e\\";
 }
 
+# Vterm stuff
 PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
