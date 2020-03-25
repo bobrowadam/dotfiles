@@ -109,6 +109,9 @@ alias helmup='/Users/bob/source/helm-charts/bin/up  $1'
 alias lmi='AWS_PROFILE=dev-k8s AWS_REGION=us-east-2 let-me-in --port 443 letmein-dev-k8s'
 alias setcon='kubectl config set-context dev-k8s.bigpanda.io --namespace $1'
 
+# bat > cat
+alias cat='bat'
+
 # added by travis gem
 [ -f /$HOME/.travis/travis.sh ] && source /$HOME/.travis/travis.sh
 # export sbcl PATH
