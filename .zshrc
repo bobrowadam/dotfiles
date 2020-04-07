@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export ZSH=/$HOME/.oh-my-zsh
-## source /$HOME/secrets.sh
+source $HOME/secrets.sh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -57,6 +57,9 @@ ZSH_THEME="robbyrussell"
 plugins=(git colorize)
 
 ## source ~/.nvm/nvm.sh
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -84,14 +87,14 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 # Emacs aliases
-alias emacs="/usr/local/opt/emacs-plus/bin/emacsclient"
-alias em="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -nw"
-alias Emacs="open -a /Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs"
-alias Eml="open -n -a /Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs"
-alias eml="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -q -nw --load ~/.emacs.d/init.el"
+alias emacs="/usr/local/opt/emacs-plus/bin/emacs-28.0.50 -nw"
+# alias em="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -nw"
+# alias Emacs="open -a /Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs"
+# alias Eml="open -n -a /Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs"
+# alias eml="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -q -nw --load ~/.emacs.d/init.el"
 alias ctags="`brew --prefix`/bin/ctags"
 
-export EDITOR="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -nw"
+export EDITOR="/usr/local/opt/emacs-plus/bin/emacs-28.0.50 -nw -q"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
@@ -103,11 +106,11 @@ export LANG="en_US.UTF-8"
 export RUST_SRC_PATH=/Users/bob/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib
 
 # kub aliases:
-alias kub='kubectl'
+# alias kub='kubectl'
 alias ccache='sudo killall -HUP mDNSResponder' # Clean DNS cahce.
-alias helmup='/Users/bob/source/helm-charts/bin/up  $1'
-alias lmi='AWS_PROFILE=dev-k8s AWS_REGION=us-east-2 let-me-in --port 443 letmein-dev-k8s'
-alias setcon='kubectl config set-context dev-k8s.bigpanda.io --namespace $1'
+
+#: local-dev 
+export BOB_DIR=$HOME/source/bob
 
 # bat > cat
 alias cat='bat'
