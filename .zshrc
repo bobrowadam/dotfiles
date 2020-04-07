@@ -103,7 +103,8 @@ export LANG="en_US.UTF-8"
 
 
 # rust src path
-export RUST_SRC_PATH=/Users/bob/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib
+export RUST_SRC_PATH=$HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/x86_64-apple-darwin/lib
+source $HOME/.cargo/env
 
 # kub aliases:
 # alias kub='kubectl'
