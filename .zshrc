@@ -87,14 +87,14 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 # Emacs aliases
-alias emacs="/usr/local/opt/emacs-plus/bin/emacs-28.0.50 -nw"
+# alias emacs="/usr/local/opt/emacs-plus/bin/emacs-28.0.50 -nw"
 # alias em="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -nw"
 # alias Emacs="open -a /Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs"
 # alias Eml="open -n -a /Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs"
 # alias eml="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -q -nw --load ~/.emacs.d/init.el"
 alias ctags="`brew --prefix`/bin/ctags"
 
-export EDITOR="/usr/local/opt/emacs-plus/bin/emacs-28.0.50 -nw -q"
+export EDITOR="em" # this is a bash script that runs /usr/local/opt/emacs-plus/bin/emacs-28.0.50 -nw -q
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
