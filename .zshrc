@@ -56,10 +56,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git colorize)
 
-## source ~/.nvm/nvm.sh
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
+alias nvminit='source $HOME/.nvm-setup.sh'
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -87,6 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 # Emacs aliases
+alias emacs='/usr/local/bin/emacs-28.0.50 -nw $1'
 # alias emacs="/usr/local/opt/emacs-plus/bin/emacs-28.0.50 -nw"
 # alias em="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -nw"
 # alias Emacs="open -a /Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs"
