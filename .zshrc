@@ -56,7 +56,6 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git colorize docker-compose nvm)
 
-alias nvminit='source $HOME/.nvm-setup.sh'
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -134,6 +133,21 @@ export PATH="$HOME/.local/lib/aws/bin/aws:$PATH"
 
 vterm_prompt_end() {
     printf "\e]51;A$(whoami)@$(hostname):$(pwd)\e\\";
+}
+
+# Bastion
+bastion () {
+    if nslookup bastion.riseup.co.il >/dev/null 2>&1 ; then
+	    BASTION=bastion_local
+    else
+	    BASTION=bastion
+    fi
+    if [[ $1 == "proxy" ]]; then
+        echo "You are about to connect to $2 via $BASTION"
+        ssh -t $BASTION ssh -i /.ssh/id_rsa $2
+    else
+        ssh $BASTION
+    fi
 }
 
 # Vterm stuff
