@@ -54,7 +54,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize)
+plugins=(git colorize docker-compose nvm)
 
 alias nvminit='source $HOME/.nvm-setup.sh'
 source $ZSH/oh-my-zsh.sh
@@ -92,7 +92,7 @@ alias emacs='/usr/local/bin/emacs-28.0.50 -nw $1'
 # alias eml="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -q -nw --load ~/.emacs.d/init.el"
 alias ctags="`brew --prefix`/bin/ctags"
 
-export EDITOR="em" # this is a bash script that runs /usr/local/opt/emacs-plus/bin/emacs-28.0.50 -nw -q
+export EDITOR="emacsclient"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
