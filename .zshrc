@@ -83,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 # Emacs aliases
-alias emacs='/usr/local/bin/emacs-28.0.50 -nw $1'
+alias em='/usr/local/bin/emacsclient -nw $1'
 # alias emacs="/usr/local/opt/emacs-plus/bin/emacs-28.0.50 -nw"
 # alias em="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -nw"
 # alias Emacs="open -a /Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs"
