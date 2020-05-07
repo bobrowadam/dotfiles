@@ -84,6 +84,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Emacs aliases
 alias em='/usr/local/bin/emacsclient -nw $1'
+
 # alias emacs="/usr/local/opt/emacs-plus/bin/emacs-28.0.50 -nw"
 # alias em="/Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs -nw"
 # alias Emacs="open -a /Applications/emacs-plus/Emacs.app/Contents/MacOS/Emacs"
@@ -106,7 +107,7 @@ source $HOME/.cargo/env
 # kub aliases:
 # alias kub='kubectl'
 alias ccache='sudo killall -HUP mDNSResponder' # Clean DNS cahce.
-
+alias csafe='docker exec -it -u root bob_safe_1 node scripts/setOnePasswordCredentials.js'
 #: local-dev 
 export BOB_DIR=$HOME/source/bob
 
@@ -150,6 +151,26 @@ bastion () {
     fi
 }
 
+# Hack for bastion: remove when fixing the router config:
+vpnfix () {
+    sudo route add -host 10.0.0.8 -interface utun2
+    sudo route add -host 10.0.0.45 -interface utun2
+}
+
+
 # Vterm stuff
-PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
-[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+function vterm_printf(){
+    if [ -n "$TMUX" ]; then
+        # Tell tmux to pass the escape sequences through
+        # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
+        printf "\ePtmux;\e\e]%s\007\e\\" "$1"
+    elif [ "${TERM%%-*}" = "screen" ]; then
+        # GNU screen (screen, screen-256color, screen-256color-bce)
+        printf "\eP\e]%s\007\e\\" "$1"
+    else
+        printf "\e]%s\e\\" "$1"
+    fi
+}
+if [[ "$INSIDE_EMACS" = 'vterm' ]]; then
+    alias clear='vterm_printf "51;Evterm-clear-scrollback";tput clear'
+fi
