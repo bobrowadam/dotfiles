@@ -3,7 +3,7 @@
 [github]
 	user = bobrowadam
 [user]
-	name = bobrowadam
-	email = adam@bigpanda.io
+	name = Adam Bobrow
+        email= adam@riseup.co.il
 [merge]
 	conflictStyle = diff3
