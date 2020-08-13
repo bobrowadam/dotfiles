@@ -10,6 +10,7 @@ alias em='/usr/local/bin/emacsclient -nw $1'
 alias ctags="`brew --prefix`/bin/ctags"
 alias ccache='sudo killall -HUP mDNSResponder' # Clean DNS cahce.
 alias csafe='docker exec -it -u root bob_safe_1 node scripts/setOnePasswordCredentials.js'
+alias dtail='dclf --tail=1'
 #: local-dev 
 export BOB_DIR=$HOME/source/bob
 

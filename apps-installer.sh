@@ -6,7 +6,7 @@ curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh;
 brew install ripgrep;
 brew install ispell
 brew tap d12frosted/emacs-plus;
-brew install emacs-plus --HEAD --with-jansson --with-modern-icon;
+brew install emacs-plus --with-jansson --with-debug --with-xwidgets --with-modern-sexy-v1-icon
 brew install gpg2;
 brew install bat;
 brew install gawk;

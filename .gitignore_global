@@ -16,3 +16,5 @@ TAGS
 coursier
 .bloop
 node_modules
+/dist/
+/.vscode/
