@@ -11,8 +11,10 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias ccache='sudo killall -HUP mDNSResponder' # Clean DNS cahce.
 alias csafe='docker exec -it -u root bob_safe_1 node scripts/setOnePasswordCredentials.js'
 alias dtail='dclf --tail=1'
+
 #: local-dev 
 export BOB_DIR=$HOME/source/bob
+alias prestart='dcrestart igor octopus scraper evan johnnycash vera citadel boti orca richard carmella whatsapp-aggregator oscar'
 
 # bat > cat
 alias cat='bat'
