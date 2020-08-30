@@ -1,6 +1,5 @@
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export ZSH=/$HOME/.oh-my-zsh
-source $HOME/secrets.sh
 ZSH_THEME="robbyrussell"
 plugins=(git colorize docker-compose)
 
@@ -14,7 +13,7 @@ alias dtail='dclf --tail=1'
 
 #: local-dev 
 export BOB_DIR=$HOME/source/bob
-alias prestart='dcrestart igor octopus scraper evan johnnycash vera citadel boti orca richard carmella whatsapp-aggregator oscar'
+alias prestart='dcrestart igor octopus scraper evan johnnycash vera citadel boti orca richard carmella whatsapp-aggregator oscar snoopy hans'
 
 # bat > cat
 alias cat='bat'
