@@ -7,3 +7,5 @@
         email= adam@riseup.co.il
 [merge]
 	conflictStyle = diff3
+[alias]
+	pm = fetch origin master:master
