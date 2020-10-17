@@ -8,7 +8,11 @@ brew install ispell
 brew tap d12frosted/emacs-plus;
 brew install emacs-plus --with-jansson --with-debug --with-xwidgets --with-modern-sexy-v1-icon
 brew install gpg2;
-brew install bat;
+brew install bat; # cat in rust
+brew install exa; # ls in rust
+brew install fd; # find in rust
+
+brew install procs; # ps in rust
 brew install gawk;
 brew install http;
 brew install zsh;
