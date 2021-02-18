@@ -5,8 +5,8 @@ touch ~/secrets.sh
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh;
 brew install ripgrep;
 brew install ispell
-brew tap d12frosted/emacs-plus;
-brew install emacs-plus --with-jansson --with-debug --with-xwidgets --with-modern-sexy-v1-icon
+brew tap daviderestivo/emacs-head
+brew install emacs-head@28 --with-cocoa --with-native-comp  --with-modern-icon-black-dragon
 brew install gpg2;
 brew install bat; # cat in rust
 brew install exa; # ls in rust

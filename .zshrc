@@ -11,10 +11,11 @@ alias ccache='sudo killall -HUP mDNSResponder' # Clean DNS cahce.
 alias csafe='docker exec -it -u root bob_safe_1 node scripts/setOnePasswordCredentials.js'
 alias dtail='dclf --tail=1'
 alias gobob='cd $BOB_DIR'
+alias npmb='npm run build -- -w'
 
 #: local-dev 
 export BOB_DIR=$HOME/source/bob
-alias prestart='dcrestart igor octopus scraper johnnycash vera citadel boti orca richard carmella whatsapp-aggregator oscar snoopy hans stas calvin safe costa'
+alias prestart='dcrestart igor octopus scraper johnnycash vera citadel boti orca richard carmella whatsapp-aggregator oscar snoopy hans stas calvin safe costa whatsapi'
 alias docb='docker build -t $1:local --build-arg GITHUB_TOKEN=${GITHUB_TOKEN} .'
 alias dbuild='docker build . --build-arg GITHUB_TOKEN=${GITHUB_TOKEN} -t $1'
 # bat > cat
