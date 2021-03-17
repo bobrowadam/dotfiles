@@ -14,3 +14,5 @@
 	required = true
 [alias]
 	pm = fetch origin master:master
+[pull]
+	ff = only
