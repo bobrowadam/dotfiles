@@ -1,21 +1,24 @@
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export ZSH=/$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git colorize docker-compose)
+plugins=(git colorize docker-compose zsh-z)
 
 source $ZSH/oh-my-zsh.sh
 
 alias em='/usr/local/bin/emacsclient -nw $1'
+alias emf='em $(rg --files | sk -m)'
 alias ctags="`brew --prefix`/bin/ctags"
 alias ccache='sudo killall -HUP mDNSResponder' # Clean DNS cahce.
 alias csafe='docker exec -it -u root bob_safe_1 node scripts/setOnePasswordCredentials.js'
 alias dtail='dclf --tail=1'
 alias gobob='cd $BOB_DIR'
 alias npmb='npm run build -- -w'
+alias npmdbg='npm run debug'
+alias npmt='npm run test -- --watch'
 
 #: local-dev 
 export BOB_DIR=$HOME/source/bob
-alias prestart='dcrestart igor octopus scraper johnnycash vera citadel boti orca richard carmella whatsapp-aggregator oscar snoopy hans stas calvin safe costa whatsapi'
+alias prestart='dcrestart igor octopus scraper johnnycash vera citadel boti orca richard whatsapp-aggregator oscar snoopy hans stas calvin costa whatsapi'
 alias docb='docker build -t $1:local --build-arg GITHUB_TOKEN=${GITHUB_TOKEN} .'
 alias dbuild='docker build . --build-arg GITHUB_TOKEN=${GITHUB_TOKEN} -t $1'
 # bat > cat
@@ -46,3 +49,8 @@ function vterm_printf(){
 if [[ "$INSIDE_EMACS" = 'vterm' ]]; then
     alias clear='vterm_printf "51;Evterm-clear-scrollback";tput clear'
 fi
+
+# Running node quickly
+function startnode() {
+  node -r source-map-support/register ./node_modules/env-setter/src/ssm-entrypoint-local.js ./dist/$1
+}

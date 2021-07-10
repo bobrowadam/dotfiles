@@ -1,6 +1,5 @@
 .projectile
 **#
-**.org
 **~
 ~
 ensime.sbt
@@ -16,7 +15,6 @@ TAGS
 coursier
 .bloop
 node_modules
-/dist/
 /.vscode/
 /temp/
 .log

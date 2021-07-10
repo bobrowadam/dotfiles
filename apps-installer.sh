@@ -11,6 +11,8 @@ brew install gpg2;
 brew install bat; # cat in rust
 brew install exa; # ls in rust
 brew install fd; # find in rust
+brew install z;
+brew install sk # fzf in rust
 
 brew install procs; # ps in rust
 brew install gawk;
