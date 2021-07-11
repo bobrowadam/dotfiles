@@ -14,7 +14,7 @@ alias dtail='dclf --tail=1'
 alias gobob='cd $BOB_DIR'
 alias npmb='npm run build -- -w'
 alias npmdbg='npm run debug'
-alias npmt='npm run test -- --watch'
+alias npmt='npm run test -- --watchAll --verbose'
 
 #: local-dev 
 export BOB_DIR=$HOME/source/bob
